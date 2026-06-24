@@ -1,0 +1,22 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model example {
+  name     String     @id(map: "project_pk") @db.VarChar
+  age      Decimal    @default(0) @db.Decimal
+  example2 example2[]
+}
+
+model example2 {
+  name    String  @db.VarChar
+  number  Decimal @db.Decimal
+  example example @relation(fields: [name], references: [name], onDelete: NoAction, onUpdate: NoAction, map: "example2_example_fk")
+
+  @@id([name, number], map: "example2_pk")
+}

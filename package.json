@@ -1,0 +1,34 @@
+{
+  "name": "fastify-prisma",
+  "version": "1.0.0",
+  "description": "This README would normally document whatever steps are necessary to get your application up and running.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env PROFILE=dev tsx watch src/server.ts",
+    "build": "cross-env PROFILE=prod tsc",
+    "start": "cross-env PROFILE=dev node dist/server.js",
+    "prisma:db-setting": "cross-env SECRET_KEY=secret npx prisma db pull",
+    "prisma:setting": "cross-env SECRET_KEY=secret npx prisma generate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/okestrolab/bpr.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/okestrolab/bpr#readme",
+  "dependencies": {
+    "@prisma/client": "^6.19.3",
+    "dotenv": "^17.4.2",
+    "fastify": "^5.8.5",
+    "fastify-plugin": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.3",
+    "cross-env": "^10.1.0",
+    "prisma": "^6.19.3",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
+  }
+}
