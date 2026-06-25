@@ -10,14 +10,9 @@
     "prisma:db-setting": "npx prisma db pull",
     "prisma:setting": "npx prisma generate"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@bitbucket.org/okestrolab/bpr.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/okestrolab/bpr#readme",
   "dependencies": {
     "@prisma/client": "^6.19.3",
     "dotenv": "^17.4.2",
