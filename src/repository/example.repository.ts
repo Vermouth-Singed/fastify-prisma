@@ -20,7 +20,9 @@ export default class ExampleRepository {
                     gte: 1,
                     lt: 10
                 }
-            }
+            },
+            skip: 0,
+            take: 10
         });
     }
 
