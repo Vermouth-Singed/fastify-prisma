@@ -7,8 +7,8 @@
     "dev": "cross-env PROFILE=dev tsx watch src/server.ts",
     "build": "cross-env PROFILE=prod tsc",
     "start": "cross-env PROFILE=dev node dist/server.js",
-    "prisma:db-setting": "cross-env SECRET_KEY=secret npx prisma db pull",
-    "prisma:setting": "cross-env SECRET_KEY=secret npx prisma generate"
+    "prisma:db-setting": "npx prisma db pull",
+    "prisma:setting": "npx prisma generate"
   },
   "repository": {
     "type": "git",
