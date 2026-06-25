@@ -4,7 +4,7 @@
   "description": "This README would normally document whatever steps are necessary to get your application up and running.",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env PROFILE=dev tsx watch src/server.ts",
+    "dev": "tsx watch src/server.ts",
     "build": "cross-env PROFILE=prod tsc",
     "start": "cross-env PROFILE=dev node dist/server.js",
     "prisma:db-setting": "npx prisma db pull",
