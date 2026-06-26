@@ -1,8 +1,9 @@
-import app from './app';
 import './config/env';
 
-const { decrypt } = require('./config/crypto');
+import { decrypt } from './config/crypto';
 process.env.DATABASE_URL = decrypt(process.env.DATABASE_URL);
+
+import app from './app';
 
 const start = async () => {
     try {
